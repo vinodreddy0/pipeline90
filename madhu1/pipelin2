@@ -1,0 +1,16 @@
+node {
+    stage('Test') {
+        git 'https://github.com/user/project.git',
+        sh 'mvn test'
+        archiveArtifacts artifacts: 'target/surefire-reports/**'
+        
+    }
+    stage('build') {
+        sh 'maven clean package -DskipTests' 
+        ahiveArtifacts artifacts: 'target/*.jar'
+
+    }
+    stage('deply') {
+        sh 'echo deploy'
+    }
+}
