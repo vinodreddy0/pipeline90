@@ -1,0 +1,15 @@
+node() {
+    staga('build') {
+        git url: 
+
+
+    }
+    staga('test') {
+        git url:
+
+    }
+    staga('deploy') {
+        
+    }
+
+}
