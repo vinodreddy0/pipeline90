@@ -1,0 +1,15 @@
+pipeline {
+    agent any
+    triggersc {
+        cron ('H/15 * * * *)
+
+    }
+    stages {
+        stages ('Example') {
+            steps {
+                echo 'Hello World'
+            }
+        }
+    }
+
+}
