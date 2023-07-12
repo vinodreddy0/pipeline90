@@ -9,4 +9,5 @@ trigger:
 pool:
  name: default
 steps:
-  - bash: pwd
+  - bash: printenv
+  
