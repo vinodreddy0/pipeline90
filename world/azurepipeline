@@ -1,0 +1,14 @@
+---
+trigger:
+  - master:
+pool: 
+  name: default
+steps: 
+ - task: VSBuild@1
+   inputs:
+     commend: restore
+     projects: src/NopCommerce.sln
+ - task: DotNetCoreCLI@2
+   inputs:
+     command: build
+     projects: src/NopCommerce.sln
